@@ -1,6 +1,6 @@
 # Graph_theory
 
-#### kirchhoff.py  
+### kirchhoff.py  
 行列木定理が成り立っているか確認するコード  
 
     $ python kirchhoff.py --dim_fn <dimension>
@@ -11,7 +11,7 @@
 
 
 結果
-    
+
     Adjacency matrix  
     [[ 0.  0.  1.  1.  1.]  
     [ 0.  0.  0.  1.  0.]  
