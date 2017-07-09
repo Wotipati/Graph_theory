@@ -7,7 +7,7 @@ import argparse
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dim_fn', type=int, default=5)
+    parser.add_argument('--node_fn', type=int, default=5)
     args = parser.parse_args()
 
     n = args.dim_fn
