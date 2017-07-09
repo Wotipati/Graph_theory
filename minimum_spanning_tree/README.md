@@ -10,7 +10,8 @@
 
 実行例  
 
-    $ python minimum_spanning_tree.py --node_fn 10  
+    $ python minimum_spanning_tree.py --node_fn 5  
 
 
 結果  
+<img width="710" alt="result" src="https://user-images.githubusercontent.com/26996041/27995241-c771823c-6505-11e7-97e5-f4a4332e5da6.png">
