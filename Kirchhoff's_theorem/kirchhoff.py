@@ -10,7 +10,7 @@ if __name__ == '__main__':
     parser.add_argument('--node_fn', type=int, default=5)
     args = parser.parse_args()
 
-    n = args.dim_fn
+    n = args.node_fn
 
     # 隣接行列Aを作成
     # 乱数でn次元正方行列を作成
