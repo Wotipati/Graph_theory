@@ -5,12 +5,12 @@
 
     $ python kirchhoff.py --dim_fn <dimension>
 
-'''html:sample  
+```html:sample  
     python kirchhoff.py --dim_fn 5  
-'''
+```
 
 
-'''html:result  
+```html:result  
     Adjacency matrix  
     [[ 0.  0.  1.  1.  1.]  
     [ 0.  0.  0.  1.  0.]  
@@ -49,4 +49,4 @@
     8.0  
     8.0  
     8.0  
-'''
+```
