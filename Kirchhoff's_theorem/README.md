@@ -12,7 +12,10 @@
     $ python kirchhoff.py --dim_fn 5  
 
 
+
 結果
+出力グラフ  
+<img width="440" alt="graph" src="https://user-images.githubusercontent.com/26996041/27993580-36a75cf8-64e8-11e7-9c22-33ac5f798896.png">
 
     Adjacency matrix  
     [[ 0.  1.  1.  0.  0.]  
@@ -42,7 +45,3 @@
     4.0  
     4.0  
     4.0  
-  
-
-出力グラフ  
-<img width="443" alt="graph" src="https://user-images.githubusercontent.com/26996041/27993564-f082bae2-64e7-11e7-93be-b21497897f00.png">
