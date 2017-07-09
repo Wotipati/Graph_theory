@@ -1,10 +1,16 @@
-# Graph_theory  
-グラフ理論を学ぶ時に書いたコードたち  
+# minimum_spanning_tree  
+
+###### 最小全域木問題を解くコード  
+
+    $ python minimum_spanning_tree.py --node_fn <total node>
+
+`--node_fn <total node>`の部分でノードの数を指定する  
+指定しなければ5つのノードの場合で計算する  
 
 
-### Kirchhoff's_theorem
-行列木定理が成り立っているか確認するコード  
+実行例  
+
+    $ python minimum_spanning_tree.py --node_fn 10  
 
 
-### minimum_spanning_tree  
-最小全域木問題を解くコード
+結果  
