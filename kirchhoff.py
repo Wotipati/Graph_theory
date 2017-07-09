@@ -18,8 +18,8 @@ if __name__ == '__main__':
     A = np.dot(A, A.T)
 
     #各成分を0or1に
-    A[A<=1] = 0
-    A[A>1] = 1
+    A[A<1] = 0
+    A[A>=1] = 1
 
     #対各成分を0に(隣接行列作成完了)
     B = np.diag(A)
@@ -27,6 +27,7 @@ if __name__ == '__main__':
     A = A - C
     print("Adjacency matrix")
     print(A)
+
 
     #ノードの次数を対角成分にもつ行列Dを作成
     D = np.sum(A, axis=1)
@@ -36,6 +37,7 @@ if __name__ == '__main__':
     H = D - A
     print("Laplacian matrix")
     print(H)
+
 
     print("cofactors")
     for i in range(n):
