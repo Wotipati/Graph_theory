@@ -2,9 +2,9 @@
 
 ##### 行列木定理が成り立っているか確認するコード  
 
-    $ python kirchhoff.py --dim_fn <total node>
+    $ python kirchhoff.py --node_fn <total node>
 
-`--dim_fn <total node>`の部分でノードの数を指定する  
+`--node_fn <total node>`の部分でノードの数を指定する  
 指定しなければ5つのノードの場合で計算する  
 
 
