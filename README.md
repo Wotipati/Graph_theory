@@ -6,10 +6,12 @@
     $ python kirchhoff.py --dim_fn <dimension>
 
 実行例  
+
     $ python kirchhoff.py --dim_fn 5  
 
 
-結果  
+結果
+    
     Adjacency matrix  
     [[ 0.  0.  1.  1.  1.]  
     [ 0.  0.  0.  1.  0.]  
