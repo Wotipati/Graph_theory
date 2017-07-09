@@ -5,7 +5,7 @@
 
     $ python kirchhoff.py --dim_fn <total node>
 
-`--dim_fn <total node>`の部分はノードの数  
+`--dim_fn <total node>`の部分でノードの数を指定する  
 指定しなければ5つのノードの場合で計算する  
 
 実行例  
