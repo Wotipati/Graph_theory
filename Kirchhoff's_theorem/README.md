@@ -7,13 +7,14 @@
 `--dim_fn <total node>`の部分でノードの数を指定する  
 指定しなければ5つのノードの場合で計算する  
 
+
 実行例  
 
     $ python kirchhoff.py --dim_fn 5  
 
 
 
-結果
+結果  
 出力グラフ  
 <img width="440" alt="graph" src="https://user-images.githubusercontent.com/26996041/27993580-36a75cf8-64e8-11e7-9c22-33ac5f798896.png">
 
