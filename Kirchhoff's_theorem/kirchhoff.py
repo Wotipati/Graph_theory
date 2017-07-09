@@ -18,10 +18,11 @@ if __name__ == '__main__':
 
     # 対称行列に
     A = np.dot(A, A.T)
+    print(A)
 
     # 各成分を0or1に
-    A[A<1] = 0
-    A[A>=1] = 1
+    A[A<0] = 0
+    A[A>0] = 1
 
     # 対各成分を0に(隣接行列作成完了)
     B = np.diag(A)
@@ -70,7 +71,7 @@ if __name__ == '__main__':
 
     # グラフの描画
     plt.figure(figsize = (5,5))
-    pos = nx.spring_layout(Graph)
+    pos = nx.spring_layout(Graph, k=0.5)
     nx.draw_networkx(Graph, pos)
 
     plt.axis("off")
