@@ -42,6 +42,7 @@
     4.0  
     4.0  
     4.0  
+  
 
-
-出力グラフ
+出力グラフ  
+<img width="443" alt="graph" src="https://user-images.githubusercontent.com/26996041/27993564-f082bae2-64e7-11e7-93be-b21497897f00.png">
