@@ -1,6 +1,6 @@
 # kirchhoff.py
 
-### 行列木定理が成り立っているか確認するコード  
+##### 行列木定理が成り立っているか確認するコード  
 
     $ python kirchhoff.py --dim_fn <total node>
 
