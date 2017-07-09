@@ -1,12 +1,13 @@
 # Graph_theory
 
-##### kirchhoff.py  
+#### kirchhoff.py  
 行列木定理が成り立っているか確認するコード  
 
     $ python kirchhoff.py --dim_fn <dimension>
 
 '''html:sample  
     python kirchhoff.py --dim_fn 5  
+'''
 
 
 '''html:result  
@@ -48,3 +49,4 @@
     8.0  
     8.0  
     8.0  
+'''
