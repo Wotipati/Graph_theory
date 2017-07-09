@@ -3,7 +3,10 @@
 ### kirchhoff.py  
 行列木定理が成り立っているか確認するコード  
 
-    $ python kirchhoff.py --dim_fn <dimension>
+    $ python kirchhoff.py --dim_fn <total node>
+
+`--dim_fn <total node>`の部分はノードの数  
+指定しなければ5つのノードの場合で計算する  
 
 実行例  
 
