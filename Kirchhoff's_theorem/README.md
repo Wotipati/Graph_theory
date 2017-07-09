@@ -10,7 +10,7 @@
 
 実行例  
 
-    $ python kirchhoff.py --dim_fn 5  
+    $ python kirchhoff.py --node_fn 5  
 
 
 
