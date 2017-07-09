@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
     # エッジの追加
     for i in range(n):
-        for j in range(n):
+        for j in range(i, n):
             if int(A[i][j]) == 1:
                 Graph.add_edge('{0}'.format(i), '{0}'.format(j))
 
