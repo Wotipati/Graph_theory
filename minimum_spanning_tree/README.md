@@ -5,7 +5,7 @@
     $ python minimum_spanning_tree.py --node_fn <total node>
 
 `--node_fn <total node>`の部分でノードの数を指定する  
-指定しなければ5つのノードの場合で計算する  
+指定しなければノードが5つの場合で計算する  
 
 
 実行例  
