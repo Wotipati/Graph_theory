@@ -1,16 +1,16 @@
-# minimum_spanning_tree  
+# minimumSpanningTree  
 
 ###### 最小全域木問題を解くコード  
 
-    $ python minimum_spanning_tree.py --node_fn <total node>
+    $ python minimumSpanningTree.py --node <total node>
 
-`--node_fn <total node>`の部分でノードの数を指定する  
+`--node <total node>`の部分でノードの数を指定する  
 指定しなければノードが5つの場合で計算する  
 
 
 実行例  
 
-    $ python minimum_spanning_tree.py --node_fn 5  
+    $ python minimumSpanningTree.py --node 5  
 
 
 結果  

@@ -7,10 +7,10 @@ import argparse
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--node_fn', type=int, default=5)
+    parser.add_argument('--node', type=int, default=5)
     args = parser.parse_args()
 
-    n = args.node_fn
+    n = args.node
 
     # 隣接行列Aを作成
     # 乱数でn次元正方行列を作成

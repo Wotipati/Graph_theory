@@ -2,15 +2,15 @@
 
 ##### 行列木定理が成り立っているか確認するコード  
 
-    $ python kirchhoff.py --node_fn <total node>
+    $ python kirchhoff.py --node <total node>
 
-`--node_fn <total node>`の部分でノードの数を指定する  
+`--node <total node>`の部分でノードの数を指定する  
 指定しなければ5つのノードの場合で計算する  
 
 
 実行例  
 
-    $ python kirchhoff.py --node_fn 5  
+    $ python kirchhoff.py --node 5  
 
 
 

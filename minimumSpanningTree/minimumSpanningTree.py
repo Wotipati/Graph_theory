@@ -8,10 +8,10 @@ import random
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--node_fn', type=int, default=5)
+    parser.add_argument('--node', type=int, default=5)
     args = parser.parse_args()
 
-    n = args.node_fn
+    n = args.node
 
     # グラフの作成
     Graph = nx.Graph()
@@ -26,22 +26,22 @@ if __name__ == '__main__':
             Graph.add_edge('{0}'.format(i), '{0}'.format(j), weight=random.randint(0,20))
 
     # ラベル（エッジの重み）の追加
-    edge_labels = {(i, j): w['weight'] for i, j, w in Graph.edges(data=True)}
+    edgeLabels = {(i, j): w['weight'] for i, j, w in Graph.edges(data=True)}
 
     # 最小全域木を求める
-    min_tree = nx.minimum_spanning_tree(Graph)
+    minTree = nx.minimum_spanning_tree(Graph)
 
     # グラフの描画
     plt.figure(figsize = (7,7))
     pos = nx.spring_layout(Graph, k=1.2)
     nx.draw_networkx(Graph, pos)
-    nx.draw_networkx_edge_labels(Graph, pos, edge_labels=edge_labels)
+    nx.draw_networkx_edge_labels(Graph, pos, edge_labels=edgeLabels)
     plt.axis("off")
 
     plt.figure(figsize = (7,7))
     nx.draw_networkx(Graph, pos)
-    nx.draw_networkx_edge_labels(Graph, pos, edge_labels=edge_labels)
-    nx.draw_networkx_edges(min_tree, pos, edge_color = 'b', width=3)
+    nx.draw_networkx_edge_labels(Graph, pos, edge_labels=edgeLabels)
+    nx.draw_networkx_edges(minTree, pos, edge_color = 'b', width=3)
     plt.axis("off")
-    
+
     plt.show()
