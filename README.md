@@ -1,4 +1,4 @@
-# dataStructures & Algorithm
+# dataStructures & Algorithms with python
 
 グラフ理論、データ構造、アルゴリズムについて学んだ時に書いたpythonスクリプト置き場
 
