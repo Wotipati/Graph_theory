@@ -22,9 +22,9 @@ def knapsack_exhaustive(item_list, max_size):
         for ci in combinations:
             sum_weight = 0
             sum_price = 0
-            for i in range(len(ci)):
-                sum_weight += ci[i].weight
-                sum_price += ci[i].price
+            for item in ci:
+                sum_weight += item.weight
+                sum_price += item.price
 
             if sum_weight <= max_size and sum_price > max_price:
                 max_price = sum_price
