@@ -7,8 +7,10 @@ import matplotlib
 matplotlib.use('MacOSX')
 
 
+def distance(a, b): return (a-b)**2
+
+
 def calc_dtw(x_a, x_b, path, window=0):
-    distance = lambda a, b: (a-b)**2
 
     if window <= 0:
         window_size = max(len(x_a), len(x_b))
