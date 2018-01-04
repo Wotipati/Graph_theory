@@ -12,21 +12,34 @@ class Item:
 
 
 def knapsack_exhaustive(item_list, upper_size):
+    minimum_size = item_list[0].size
+
+    for item in item_list:
+        if item.size < minimum_size:
+            minimum_size = item.size
+
+    max_number = int(upper_size / minimum_size)
+
     best_combination = []
     max_price = 0
     max_size = 0
 
-    for number in range(2, len(item_list)+1):
-        combinations = list(itertools.combinations(item_list, number))
+    for number in range(2, max_number+1):
+        combinations = list(itertools.combinations_with_replacement(item_list, number))
 
         for ci in combinations:
             sum_size = 0
             sum_price = 0
+            bmax_checker = True
+
             for item in ci:
                 sum_size += item.size
                 sum_price += item.price
+                if sum_size > upper_size:
+                    bmax_checker = False
+                    break
 
-            if sum_size <= upper_size and sum_price > max_price:
+            if bmax_checker and sum_price > max_price:
                 max_price = sum_price
                 max_size = sum_size
                 best_combination = ci
