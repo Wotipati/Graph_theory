@@ -14,14 +14,14 @@ After: [10 24 39 40 44]
 
 ---
 
-#### [bubbleSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/01Sorting/bubbleSort.py)
+#### [bubbleSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/bubbleSort.py)
 - シンプルなバブルソート
 
-#### [bubbleSortBeta.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/01Sorting/bubbleSortBeta.py)
+#### [bubbleSortBeta.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/bubbleSortBeta.py)
 - バブルソートの改良版
 - 改良前の半分の計算量で済む
 - 「ループが一回終了するごとに、配列後方要素が確実にソート済みになる」という性質を利用
 
-#### [quickSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/01Sorting/quickSort.py)
+#### [quickSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/quickSort.py)
 - クイックソート
 - 基準値（ピポッド）は配列の先頭
