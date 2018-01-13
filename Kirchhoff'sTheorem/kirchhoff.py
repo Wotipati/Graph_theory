@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import argparse
 
 
-if __name__ == '__main__':
-
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--node', type=int, default=5)
     args = parser.parse_args()
@@ -76,3 +75,7 @@ if __name__ == '__main__':
 
     plt.axis("off")
     plt.show()
+
+
+if __name__ == '__main__':
+    main()
