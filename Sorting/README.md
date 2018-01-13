@@ -24,4 +24,9 @@ After: [10 24 39 40 44]
 
 #### [quickSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/quickSort.py)
 - クイックソート
+- 不安定なソート
 - 基準値（ピポッド）は配列の先頭
+
+#### [mergeSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/mergeSort.py))
+- マージソート
+- 安定なソート
