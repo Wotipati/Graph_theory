@@ -17,7 +17,6 @@ def bubble_sort(input_list):
                 flag = True
 
         finished += 1
-        print(finished)
 
 
 def main():
