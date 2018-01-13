@@ -16,6 +16,7 @@ After: [10 24 39 40 44]
 
 #### [bubbleSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/bubbleSort.py)
 - シンプルなバブルソート
+- 安定、N^2
 
 #### [bubbleSortBeta.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/bubbleSortBeta.py)
 - バブルソートの改良版
@@ -24,9 +25,9 @@ After: [10 24 39 40 44]
 
 #### [quickSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/quickSort.py)
 - クイックソート
-- 不安定なソート
+- 不安定、N^2 ~ N*logN
 - 基準値（ピポッド）は配列の先頭
 
-#### [mergeSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/mergeSort.py))
+#### [mergeSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/mergeSort.py)
 - マージソート
-- 安定なソート
+- 安定、N*logN
