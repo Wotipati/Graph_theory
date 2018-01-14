@@ -23,6 +23,17 @@ After: [10 24 39 40 44]
 - 改良前の半分の計算量で済む
 - 「ループが一回終了するごとに、配列後方要素が確実にソート済みになる」という性質を利用
 
+#### [insertSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/insertSort.py)
+- 単純挿入ソート
+- 安定、N^2
+- 挿入する場所はリニアサーチで探索
+
+#### [binaryInsertSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/binaryInsertSort.py)
+- 二分挿入ソート
+- 安定、N^2
+- 単純挿入ソートの改良版
+- 挿入する場所はバイナリサーチで探索
+
 #### [quickSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/quickSort.py)
 - クイックソート
 - 不安定、N^2 ~ N*logN
