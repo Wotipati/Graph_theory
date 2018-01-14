@@ -31,3 +31,8 @@ After: [10 24 39 40 44]
 #### [mergeSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/mergeSort.py)
 - マージソート
 - 安定、N*logN
+
+#### [combSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/combSort.py)
+- コームソート
+- 不安定、平均N*logN
+- 収縮率 = 1.3
