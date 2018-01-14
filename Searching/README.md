@@ -28,5 +28,5 @@ What are you looking for?
 
 ---
 
-#### [linearSearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Search/linearSearch.py)
+#### [linearSearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/linearSearch.py)
 - シンプルなリニアサーチ(線形探索)

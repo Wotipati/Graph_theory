@@ -2,6 +2,10 @@
 
 データ構造、アルゴリズム、グラフ理論について学んだ時に書いたpythonスクリプト置き場
 
+### [Searching](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Searching)
+- 探索アルゴリズム
+- リニアサーチ、バイナリサーチ、自己組織化、自己組織化探索
+
 ### [Sorting](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Sorting)
 - ソートアルゴリズム7種
 - バブルソート、クイックソート、マージソート ... 
