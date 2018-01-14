@@ -4,14 +4,14 @@
 
 ### [Searching](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Searching)
 - 探索アルゴリズム
-- リニアサーチ、バイナリサーチ、自己組織化、自己組織化探索
+- リニアサーチ、バイナリサーチ、自己組織化探索
 
 ### [Sorting](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Sorting)
 - ソートアルゴリズム7種
 - バブルソート、クイックソート、マージソート ... 
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
-- 動的計画法
+- 動的計画法関連
 - ナップザック問題
 
 ### [DynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicTimeWarping)
@@ -19,7 +19,7 @@
 
 
 ### [GraphTheory](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/GraphTheory)
-- グラフ理論
+- グラフ理論関連
 - 行列木定理、最小全域木問題
 
 ---
