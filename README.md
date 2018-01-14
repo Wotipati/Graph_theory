@@ -1,18 +1,24 @@
 # dataStructures & Algorithms
 
-グラフ理論、データ構造、アルゴリズムについて学んだ時に書いたpythonスクリプト置き場
+データ構造、アルゴリズム、グラフ理論について学んだ時に書いたpythonスクリプト置き場
 
 ### [Sorting](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Sorting)
-- ソートアルゴリズム7種（バブルソート、クイックソート、マージソート ... )
+- ソートアルゴリズム7種
+- バブルソート、クイックソート、マージソート ... 
 
-### [knapsackProblem](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/knapsackProblem)
-- ナップザック問題(動的計画法)
+### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/knapsackProblem)
+- 動的計画法
+- ナップザック問題
 
-### [dynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/dynamicTimeWarping)
+### [DynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/dynamicTimeWarping)
 - 動的時間伸縮法(DTW)
 
-### [Kirchhoff'sTheorem](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/Kirchhoff'sTheorem)
-- 行列木定理
 
-### [minimumSpanningTree](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/minimumSpanningTree)
-- 最小全域木問題  
+### [GraphTheory](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/Kirchhoff'sTheorem)
+- グラフ理論
+- 行列木定理、最小全域木問題
+
+---
+
+### References
+- [プログラミングの宝箱 アルゴリズムとデータ構造 第2版](http://www.sbcr.jp/products/4797363289.html)
