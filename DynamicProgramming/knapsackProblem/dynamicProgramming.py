@@ -39,7 +39,6 @@ def knapsack_dynamic_programming(item_list, max_size):
 def main():
     knapsack_size = 30
 
-    #item_data = (weight, price)
     item_data = [(4, 6), (3, 4), (1, 1)]
 
     item_list = [Item(price, weight, 0) for weight, price in item_data]

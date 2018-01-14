@@ -1,6 +1,8 @@
 # kirchhoff.py
 
-##### 行列木定理が成り立っているか確認するコード  
+行列木定理が成り立っているか確認するコード  
+
+### Usage
 
     $ python kirchhoff.py --node <total node>
 
@@ -8,13 +10,13 @@
 指定しなければ5つのノードの場合で計算する  
 
 
-実行例  
+### Example
 
     $ python kirchhoff.py --node 5  
 
 
 
-結果  
+#### Results  
 出力グラフ  
 <img width="440" alt="graph" src="https://user-images.githubusercontent.com/26996041/27993580-36a75cf8-64e8-11e7-9c22-33ac5f798896.png">
 

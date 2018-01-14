@@ -55,7 +55,6 @@ def knapsack_exhaustive(item_list, upper_size):
 def main():
     knapsack_size = 10
 
-    #item_data = (size, price)
     item_data = [(4, 6), (3, 4), (1, 1)]
 
     item_list = [Item(price, size, 0) for size, price in item_data]

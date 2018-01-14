@@ -44,6 +44,7 @@ def calc_dtw(x_a, x_b, path, window=0):
     index_a = x_a_len-1
     index_b = x_b_len-1
     path.extend([[x_a_len-1, x_b_len-1]])
+
     while index_a >= 0:
         if gain[index_a][index_b-1] < min(gain[index_a-1][index_b], gain[index_a-1][index_b-1]):
             path.extend([[index_a, index_b-1]])

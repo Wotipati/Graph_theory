@@ -39,7 +39,6 @@ def main():
     print("Laplacian matrix")
     print(H)
 
-
     print("cofactors")
     for i in range(n):
         for j in range(i, n):
@@ -52,12 +51,11 @@ def main():
 
             print(Cofactor)
 
-
     # 無向グラフの作成
     # 空のグラフの作成
     Graph = nx.Graph()
 
-    #ノードの追加
+    # ノードの追加
     for i in range(n):
         Graph.add_node('{0}'.format(i))
 
@@ -66,7 +64,6 @@ def main():
         for j in range(i, n):
             if int(A[i][j]) == 1:
                 Graph.add_edge('{0}'.format(i), '{0}'.format(j))
-
 
     # グラフの描画
     plt.figure(figsize = (5,5))

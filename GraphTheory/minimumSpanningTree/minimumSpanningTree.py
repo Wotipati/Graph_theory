@@ -15,7 +15,7 @@ def main():
     # グラフの作成
     Graph = nx.Graph()
 
-    #ノードの追加
+    # ノードの追加
     for i in range(n):
         Graph.add_node('{0}'.format(i))
 
@@ -44,6 +44,7 @@ def main():
     plt.axis("off")
 
     plt.show()
+
 
 if __name__ == '__main__':
     main()
