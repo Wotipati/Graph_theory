@@ -7,7 +7,7 @@ def insert_sort(input_list):
     for sorted_index in range(input_range-1):
         insert = input_list[sorted_index+1]
 
-        # liner search
+        # linear search
         insert_index = 0
         while insert_index <= sorted_index:
             if input_list[insert_index] > insert:
