@@ -6,15 +6,15 @@
 - ソートアルゴリズム7種
 - バブルソート、クイックソート、マージソート ... 
 
-### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/knapsackProblem)
+### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法
 - ナップザック問題
 
-### [DynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/dynamicTimeWarping)
+### [DynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicTimeWarping)
 - 動的時間伸縮法(DTW)
 
 
-### [GraphTheory](https://github.com/Wotipati/dataStructuresAndAlgorithm/tree/master/Kirchhoff'sTheorem)
+### [GraphTheory](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/GraphTheory)
 - グラフ理論
 - 行列木定理、最小全域木問題
 
