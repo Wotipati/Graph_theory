@@ -1,49 +1,32 @@
-# Sorting
+# Searching
 
 ### Usage
 ```
-python XXXX.py --n <生成するリストの個数>
+python XXXX.py --n <生成するタプルの個数>
+<generated tupple>
+What are you looking for?
+>> <target number & Enter>
+>> <index number>
 ```
 
 ### Example
 ```
-$ python bubbleSort.py --n 5
-Before:[40 44 10 39 24]
-After: [10 24 39 40 44]
+$ python linearSearch.py --n 10
+(62, 98, 78, 81, 28, 65, 58, 15, 66, 12)
+What are you looking for?
+>> 58
+7
+```
+```
+python linearSearch.py --n 4
+(29, 36, 22, 33)
+What are you looking for?
+>> 20
+20 is not found in the tuple
+
 ```
 
 ---
 
-#### [bubbleSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/bubbleSort.py)
-- シンプルなバブルソート
-- 安定、N^2
-
-#### [bubbleSortBeta.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/bubbleSortBeta.py)
-- バブルソートの改良版
-- 改良前の半分の計算量で済む
-- 「ループが一回終了するごとに、配列後方要素が確実にソート済みになる」という性質を利用
-
-#### [insertSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/insertSort.py)
-- 単純挿入ソート
-- 安定、N^2
-- 挿入する場所はリニアサーチで探索
-
-#### [binaryInsertSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/binaryInsertSort.py)
-- 二分挿入ソート
-- 安定、N^2
-- 単純挿入ソートの改良版
-- 挿入する場所はバイナリサーチで探索
-
-#### [quickSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/quickSort.py)
-- クイックソート
-- 不安定、N^2 ~ N*logN
-- 基準値（ピポッド）は配列の先頭
-
-#### [mergeSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/mergeSort.py)
-- マージソート
-- 安定、N*logN
-
-#### [combSort.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Sorting/combSort.py)
-- コームソート
-- 不安定、平均N*logN
-- 収縮率 = 1.3
+#### [linearSearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Search/linearSearch.py)
+- シンプルなリニアサーチ(線形探索)
