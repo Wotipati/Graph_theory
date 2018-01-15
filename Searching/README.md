@@ -29,9 +29,13 @@ What are you looking for?
 ---
 
 #### [linearSearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/linearSearch.py)
-- シンプルなリニアサーチ(線形探索)
+- シンプルなリニアサーチ (線形探索)
 
 #### [linearSearchBeta.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/linearSearchBeta.py)
 - リニアサーチ改良版
 - "番兵"を用いた高速化
 - indexの範囲のチェックが無い分高速化
+
+#### [binarySearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/binarySearch.py)
+- バイナリサーチ (二分探索)
+- ソート済みの配列のサーチに有効
