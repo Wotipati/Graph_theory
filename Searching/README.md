@@ -39,3 +39,13 @@ What are you looking for?
 #### [binarySearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/binarySearch.py)
 - バイナリサーチ (二分探索)
 - ソート済みの配列のサーチに有効
+
+#### [binarySearchBeta.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/binarySearchBeta.py)
+- バイナリサーチの改良版
+- 同じ値が続く場合、先頭のインデックスを返す
+
+#### [organizationSearch.py](https://github.com/Wotipati/dataStructuresAndAlgorithms/blob/master/Searching/organizationSearch.py)
+- 自己組織化探索
+- 一度サーチしたデータを一つ先頭へ移動させる
+- 本当は一番先頭に移動させたいが、その場合全ての要素を一つずつ移動させるためO(N)の計算量が必要
+- "リスト"というデータ構造を使えばO(1)でできる！
