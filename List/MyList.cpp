@@ -9,16 +9,16 @@
 #include "MyList.h"
 
 MyList::MyList(){
-    beginNode_ = NULL;
-    endNode_ = NULL;
+    beginNode_ = nullptr;
+    endNode_ = nullptr;
     listLength_ = 0;
 }
 
 
-void MyList::replaceNode(int newdata_, int index){
+bool MyList::replaceNode(int newData_, int index){
     if(abs(index)>listLength_ || index==0){
         std::cout << "ERROR: out of range" << std::endl;
-        exit(1);
+        return false;
     }
 
     if(index>0){
@@ -26,27 +26,28 @@ void MyList::replaceNode(int newdata_, int index){
         for(int i=0; i<index-1; i++){
             nodeSearcher = nodeSearcher->next_;
         }
-        nodeSearcher->data_ = newdata_;
+        nodeSearcher->data_ = newData_;
     }
     else{
         Node *nodeSearcher = endNode_;
         for(int i=0; i<index-1; i++){
             nodeSearcher = nodeSearcher->prev_;
         }
-        nodeSearcher->data_ = newdata_;
+        nodeSearcher->data_ = newData_;
     }
+    return true;
 }
 
 
-void MyList::pushBackNode(int newdata_){
+bool MyList::pushBackNode(int newData_){
     Node *newNode;
     newNode = new Node;
-    newNode->data_ = newdata_;
-    newNode->next_ = NULL;
+    newNode->data_ = newData_;
+    newNode->next_ = nullptr;
 
     Node *nodeSearcher;
     if(!beginNode_){
-        newNode->prev_ = NULL;
+        newNode->prev_ = nullptr;
         beginNode_ = newNode;
         endNode_ = newNode;
     }
@@ -60,24 +61,25 @@ void MyList::pushBackNode(int newdata_){
         endNode_ = newNode;
     }
     listLength_ += 1;
+    return true;
 }
 
 
-void MyList::insertNode(int newdata_, int index){
+bool MyList::insertNode(int newData_, int index){
     if(abs(index)>listLength_+1 || index == 0){
         std::cout << "ERROR: out of range" << std::endl;
-        exit(1);
+        return false;
     }
 
     Node *newNode;
     newNode = new Node;
-    newNode->data_ = newdata_;
+    newNode->data_ = newData_;
 
     if(index == -1 || index == listLength_+1){
-        pushBackNode(newdata_);
+        pushBackNode(newData_);
     }
     else if(index == 1 || index == -(listLength_+1)){
-        newNode->prev_ = NULL;
+        newNode->prev_ = nullptr;
         newNode->next_ = beginNode_;
         beginNode_->prev_ = newNode;
         beginNode_ = newNode;
@@ -106,6 +108,7 @@ void MyList::insertNode(int newdata_, int index){
         nodeSearcherNext->prev_ = newNode;
         listLength_ += 1;
     }
+    return true;
 }
 
 
@@ -119,24 +122,33 @@ void MyList::display(){
 }
 
 
-void MyList::popBackNode(){
+bool MyList::popBackNode(){
+    if(listLength_ == 0){
+        std::cout << "ERROR: stack underflow" <<std::endl;
+        return false;
+    }
     endNode_ = endNode_->prev_;
     delete endNode_->next_;
-    endNode_->next_ = NULL;
+    endNode_->next_ = nullptr;
     listLength_ -= 1;
+    return true;
 }
 
 
-void MyList::deleteNode(int index){
+bool MyList::deleteNode(int index){
+    if(listLength_ == 0){
+        std::cout << "ERROR: stack underflow" <<std::endl;
+        return false;
+    }
     if(abs(index)>listLength_ || index==0){
         std::cout << "ERROR: out of range" << std::endl;
-        exit(1);
+        return false;
     }
 
     if(index == 1 || index == -1*listLength_){
         beginNode_ = beginNode_->next_;
         delete beginNode_->prev_;
-        beginNode_->prev_ = NULL;
+        beginNode_->prev_ = nullptr;
         listLength_ -= 1;
     }
     else if(index == -1 || index == listLength_){
@@ -164,13 +176,14 @@ void MyList::deleteNode(int index){
         listLength_ -= 1;
         delete deletingNode;
     }
+    return true;
 }
 
 
 MyList::~MyList(){
     Node *nodeSearcher = beginNode_;
     Node *next_Node;
-    while(nodeSearcher!=NULL){
+    while(nodeSearcher!= nullptr){
         next_Node = nodeSearcher->next_;
         delete nodeSearcher;
         nodeSearcher = next_Node;

@@ -16,11 +16,11 @@ class MyList{
 public:
     MyList();
     ~MyList();
-    void replaceNode(int newData, int index);
-    void pushBackNode(int newData);
-    void insertNode(int newData, int index);
-    void popBackNode();
-    void deleteNode(int index);
+    bool replaceNode(int newData, int index);
+    bool pushBackNode(int newData);
+    bool insertNode(int newData, int index);
+    bool popBackNode();
+    bool deleteNode(int index);
     void display();
 
 private:
