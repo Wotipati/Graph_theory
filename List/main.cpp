@@ -12,9 +12,9 @@
 
 int main(int argc, const char * argv[]) {
     MyList myList;
-    myList.pushbackNode(0);
+    myList.pushBackNode(0);
     myList.display();
-    myList.pushbackNode(5);
+    myList.pushBackNode(5);
     myList.display();
     myList.replaceNode(4, 1);
     myList.display();
@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     myList.display();
     myList.insertNode(1, -8);
     myList.display();
-    myList.popbackNode();
+    myList.popBackNode();
     myList.display();
     myList.deleteNode(2);
     myList.display();

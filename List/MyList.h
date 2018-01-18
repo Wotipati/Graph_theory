@@ -17,12 +17,12 @@ public:
     MyList();
     ~MyList();
     void replaceNode(int newData, int index);
-    void pushbackNode(int newData);
+    void pushBackNode(int newData);
     void insertNode(int newData, int index);
-    void popbackNode();
+    void popBackNode();
     void deleteNode(int index);
     void display();
-    
+
 private:
     MyList *beginNode_;
     MyList *endNode_;

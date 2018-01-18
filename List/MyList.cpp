@@ -20,7 +20,7 @@ void MyList::replaceNode(int newdata_, int index){
         std::cout << "ERROR: out of range" << std::endl;
         exit(1);
     }
-    
+
     if(index>0){
         MyList *nodeSearcher = beginNode_;
         for(int i=0; i<index-1; i++){
@@ -38,12 +38,12 @@ void MyList::replaceNode(int newdata_, int index){
 }
 
 
-void MyList::pushbackNode(int newdata_){
+void MyList::pushBackNode(int newdata_){
     MyList *newNode;
     newNode = new MyList;
     newNode->data_ = newdata_;
     newNode->next_ = NULL;
-    
+
     MyList *nodeSearcher;
     if(!beginNode_){
         newNode->prev_ = NULL;
@@ -68,13 +68,13 @@ void MyList::insertNode(int newdata_, int index){
         std::cout << "ERROR: out of range" << std::endl;
         exit(1);
     }
-    
+
     MyList *newNode;
     newNode = new MyList;
     newNode->data_ = newdata_;
-    
+
     if(index == -1 || index == listLength_+1){
-        pushbackNode(newdata_);
+        pushBackNode(newdata_);
     }
     else if(index == 1 || index == -(listLength_+1)){
         newNode->prev_ = NULL;
@@ -88,10 +88,10 @@ void MyList::insertNode(int newdata_, int index){
         for(int i=1; i<index; i++){
             nodeSearcher = nodeSearcher->next_;
         }
-        MyList *nodeSearcherprev_ = nodeSearcher->prev_;
+        MyList *nodeSearcherPrev = nodeSearcher->prev_;
         newNode->next_ = nodeSearcher;
-        newNode->prev_ = nodeSearcherprev_;
-        nodeSearcherprev_->next_ = newNode;
+        newNode->prev_ = nodeSearcherPrev;
+        nodeSearcherPrev->next_ = newNode;
         nodeSearcher->prev_ = newNode;
         listLength_ += 1;
     }else{
@@ -99,11 +99,11 @@ void MyList::insertNode(int newdata_, int index){
         for(int i=-1; i>index; i--){
             nodeSearcher = nodeSearcher->prev_;
         }
-        MyList *nodeSearchernext_ = nodeSearcher->next_;
-        newNode->next_ = nodeSearchernext_;
+        MyList *nodeSearcherNext = nodeSearcher->next_;
+        newNode->next_ = nodeSearcherNext;
         newNode->prev_ = nodeSearcher;
         nodeSearcher->next_ = newNode;
-        nodeSearchernext_->prev_ = newNode;
+        nodeSearcherNext->prev_ = newNode;
         listLength_ += 1;
     }
 }
@@ -119,7 +119,7 @@ void MyList::display(){
 }
 
 
-void MyList::popbackNode(){
+void MyList::popBackNode(){
     endNode_ = endNode_->prev_;
     delete endNode_->next_;
     endNode_->next_ = NULL;
@@ -132,15 +132,15 @@ void MyList::deleteNode(int index){
         std::cout << "ERROR: out of range" << std::endl;
         exit(1);
     }
-    
-    if(index == 1 || index == listLength_){
+
+    if(index == 1 || index == -1*listLength_){
         beginNode_ = beginNode_->next_;
         delete beginNode_->prev_;
         beginNode_->prev_ = NULL;
         listLength_ -= 1;
     }
-    else if(index == -1 || index == -1*listLength_){
-        popbackNode();
+    else if(index == -1 || index == listLength_){
+        popBackNode();
     }
     else if(index>1){
         MyList *nodeSearcher = beginNode_;
