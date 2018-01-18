@@ -3,8 +3,12 @@ backup
 *.avi
 *.model
 *.mov
-*.weights
 *.csv
 *.mp4
 *.prproj
-*.DS_Store
+.DS_Store
+common.h
+/**/cmake-build-debug/*
+/**/.idea/*
+/**/build/*
+/.idea/*

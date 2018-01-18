@@ -3,8 +3,8 @@
 データ構造、アルゴリズム、グラフ理論について学んだ時に書いたpythonスクリプト置き場
 
 ### [Searching](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Searching)
-- 探索アルゴリズム
-- リニアサーチ、バイナリサーチ、自己組織化探索
+- 探索アルゴリズム6種
+- リニアサーチ、バイナリサーチ、自己組織化探索 ...
 
 ### [Sorting](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Sorting)
 - ソートアルゴリズム7種
@@ -12,7 +12,7 @@
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法関連
-- ナップザック問題
+- ナップザック問題yt6
 
 ### [DynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicTimeWarping)
 - 動的時間伸縮法(DTW)
