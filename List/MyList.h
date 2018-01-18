@@ -24,12 +24,16 @@ public:
     void display();
 
 private:
-    MyList *beginNode_;
-    MyList *endNode_;
-    MyList *prev_;
-    MyList *next_;
-    int data_;
+    struct Node{
+        Node *prev_;
+        Node *next_;
+        int data_;
+    };
+
+    Node *beginNode_;
+    Node *endNode_;
     int listLength_;
 };
+
 
 #endif /* MyList_h */

@@ -22,14 +22,14 @@ void MyList::replaceNode(int newdata_, int index){
     }
 
     if(index>0){
-        MyList *nodeSearcher = beginNode_;
+        Node *nodeSearcher = beginNode_;
         for(int i=0; i<index-1; i++){
             nodeSearcher = nodeSearcher->next_;
         }
         nodeSearcher->data_ = newdata_;
     }
     else{
-        MyList *nodeSearcher = endNode_;
+        Node *nodeSearcher = endNode_;
         for(int i=0; i<index-1; i++){
             nodeSearcher = nodeSearcher->prev_;
         }
@@ -39,12 +39,12 @@ void MyList::replaceNode(int newdata_, int index){
 
 
 void MyList::pushBackNode(int newdata_){
-    MyList *newNode;
-    newNode = new MyList;
+    Node *newNode;
+    newNode = new Node;
     newNode->data_ = newdata_;
     newNode->next_ = NULL;
 
-    MyList *nodeSearcher;
+    Node *nodeSearcher;
     if(!beginNode_){
         newNode->prev_ = NULL;
         beginNode_ = newNode;
@@ -69,8 +69,8 @@ void MyList::insertNode(int newdata_, int index){
         exit(1);
     }
 
-    MyList *newNode;
-    newNode = new MyList;
+    Node *newNode;
+    newNode = new Node;
     newNode->data_ = newdata_;
 
     if(index == -1 || index == listLength_+1){
@@ -84,22 +84,22 @@ void MyList::insertNode(int newdata_, int index){
         listLength_ += 1;
     }
     else if(index>1){
-        MyList *nodeSearcher = beginNode_;
+        Node *nodeSearcher = beginNode_;
         for(int i=1; i<index; i++){
             nodeSearcher = nodeSearcher->next_;
         }
-        MyList *nodeSearcherPrev = nodeSearcher->prev_;
+        Node *nodeSearcherPrev = nodeSearcher->prev_;
         newNode->next_ = nodeSearcher;
         newNode->prev_ = nodeSearcherPrev;
         nodeSearcherPrev->next_ = newNode;
         nodeSearcher->prev_ = newNode;
         listLength_ += 1;
     }else{
-        MyList *nodeSearcher = endNode_;
+        Node *nodeSearcher = endNode_;
         for(int i=-1; i>index; i--){
             nodeSearcher = nodeSearcher->prev_;
         }
-        MyList *nodeSearcherNext = nodeSearcher->next_;
+        Node *nodeSearcherNext = nodeSearcher->next_;
         newNode->next_ = nodeSearcherNext;
         newNode->prev_ = nodeSearcher;
         nodeSearcher->next_ = newNode;
@@ -110,7 +110,7 @@ void MyList::insertNode(int newdata_, int index){
 
 
 void MyList::display(){
-    MyList *nodeSearcher = beginNode_;
+    Node *nodeSearcher = beginNode_;
     while(nodeSearcher->next_){
         std::cout << nodeSearcher->data_ << ", ";
         nodeSearcher = nodeSearcher->next_;
@@ -143,22 +143,22 @@ void MyList::deleteNode(int index){
         popBackNode();
     }
     else if(index>1){
-        MyList *nodeSearcher = beginNode_;
+        Node *nodeSearcher = beginNode_;
         for(int i=1; i<index-1; i++){
             nodeSearcher = nodeSearcher->next_;
         }
-        MyList *deletingNode = nodeSearcher->next_;
+        Node *deletingNode = nodeSearcher->next_;
         nodeSearcher->next_ = deletingNode->next_;
         nodeSearcher->next_->prev_ = nodeSearcher;
         listLength_ -= 1;
         delete deletingNode;
     }
     else{
-        MyList *nodeSearcher = endNode_;
+        Node *nodeSearcher = endNode_;
         for(int i=-1; i>index+1; i--){
             nodeSearcher = nodeSearcher->prev_;
         }
-        MyList *deletingNode = nodeSearcher->prev_;
+        Node *deletingNode = nodeSearcher->prev_;
         nodeSearcher->prev_ = deletingNode->prev_;
         nodeSearcher->prev_->next_ = nodeSearcher;
         listLength_ -= 1;
@@ -168,8 +168,8 @@ void MyList::deleteNode(int index){
 
 
 MyList::~MyList(){
-    MyList *nodeSearcher = beginNode_;
-    MyList *next_Node;
+    Node *nodeSearcher = beginNode_;
+    Node *next_Node;
     while(nodeSearcher!=NULL){
         next_Node = nodeSearcher->next_;
         delete nodeSearcher;
