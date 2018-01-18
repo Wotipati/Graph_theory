@@ -5,8 +5,8 @@
 ```c++
 int main(int argc, const char * argv[]) {
     MyList myList;             // MyList
-    myList.pushbackNode(0);    // [0]
-    myList.pushbackNode(5);    // [0, 5]
+    myList.pushBackNode(0);    // [0]
+    myList.pushBackNode(5);    // [0, 5]
     myList.replaceNode(4, 1);  // [4, 5]
     myList.insertNode(2, 1);   // [2, 4, 5]
     myList.insertNode(3, 2);   // [2, 3, 4, 5]
@@ -14,12 +14,13 @@ int main(int argc, const char * argv[]) {
     myList.insertNode(8, -1);  // [2, 3, 4, 5, 7, 8]
     myList.insertNode(6, -3);  // [2, 3, 4, 5, 6, 7, 8]
     myList.insertNode(1, -8);  // [1, 2, 3, 4, 5, 6, 7, 8]
-    myList.popbackNode();      // [1, 2, 3, 4, 5, 6, 7]
+    myList.popBackNode();      // [1, 2, 3, 4, 5, 6, 7]
     myList.deleteNode(2);      // [1, 3, 4, 5, 6, 7]
     myList.deleteNode(6);      // [1, 3, 4, 5, 6]
     myList.deleteNode(-1);     // [1, 3, 4, 5]
     myList.deleteNode(-2);     // [1, 3, 5]
     myList.deleteNode(-3);     // [3, 5]
+    myList.display();          // "3, 5"と表示される
     return 0;
 }
 ```
