@@ -18,4 +18,4 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
 add_executable(List
         main.cpp
         MyList.cpp
-        MyList.h)
+        MyList.h MyListTemplate.h)
