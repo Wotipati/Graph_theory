@@ -11,7 +11,10 @@
 - バブルソート、クイックソート、マージソート ...
 
 ### [List](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/List)
-- 自作の双方向リスト(C++実装)
+- 自作の双方向リスト (C++実装)
+
+### [Stack](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Stack)
+- スタックマシンによる簡単な四則演算 (c++実装)
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法関連
