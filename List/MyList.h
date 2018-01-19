@@ -12,12 +12,6 @@
 #include <stdio.h>
 #include <iostream>
 
-struct Node{
-    Node *prev_;
-    Node *next_;
-    int data_;
-};
-
 class MyList{
 public:
     MyList();
@@ -30,6 +24,12 @@ public:
     void display();
 
 private:
+    struct Node{
+        Node *prev_;
+        Node *next_;
+        int data_;
+    };
+
     Node *beginNode_;
     Node *endNode_;
     int listLength_;
