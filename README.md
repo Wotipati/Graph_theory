@@ -11,7 +11,7 @@
 - バブルソート、クイックソート、マージソート ...
 
 ### [List](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/List)
-- 自作の双方向リンクリスト(C++実装)
+- 自作の双方向リスト(C++実装)
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法関連
