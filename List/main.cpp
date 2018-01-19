@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "MyList.h"
+#include "MyListTemplate.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -46,5 +47,9 @@ int main(int argc, const char * argv[]) {
     myList.popBackNode();
     myList.pushBackNode(2);
     myList.display();
+
+    MyListTemp<double> myListTemp;
+    myListTemp.pushBackNode(0.5);
+    myListTemp.display();
     return 0;
 }
