@@ -42,5 +42,9 @@ int main(int argc, const char * argv[]) {
     myList.display();
     myList.deleteNode(-3);
     myList.display();
+    myList.popBackNode();
+    myList.popBackNode();
+    myList.pushBackNode(2);
+    myList.display();
     return 0;
 }

@@ -46,7 +46,7 @@ bool MyList::pushBackNode(int newData_){
     newNode->next_ = nullptr;
 
     Node *nodeSearcher;
-    if(!beginNode_){
+    if(!beginNode_ || listLength_ == 0){
         newNode->prev_ = nullptr;
         beginNode_ = newNode;
         endNode_ = newNode;
@@ -127,6 +127,10 @@ bool MyList::popBackNode(){
         std::cout << "ERROR: stack underflow" <<std::endl;
         return false;
     }
+    else if(listLength_ == 1){
+        listLength_ = 0;
+        return true;
+    }
     endNode_ = endNode_->prev_;
     delete endNode_->next_;
     endNode_->next_ = nullptr;
@@ -140,9 +144,14 @@ bool MyList::deleteNode(int index){
         std::cout << "ERROR: stack underflow" <<std::endl;
         return false;
     }
+
     if(abs(index)>listLength_ || index==0){
         std::cout << "ERROR: out of range" << std::endl;
         return false;
+    }
+
+    if(listLength_ == 1){
+        popBackNode();
     }
 
     if(index == 1 || index == -1*listLength_){
