@@ -15,11 +15,11 @@ void queueListExample(QueueList queList);
 
 
 int main(int argc, const char * argv[]) {
-//    QueueArray queArray;
-//    queueArrayExample(queArray);
+    QueueArray queArray;
+    queueArrayExample(queArray);
 
-    QueueList queList;
-    queueListExample(queList);
+//    QueueList queList;
+//    queueListExample(queList);
     return 0;
 }
 

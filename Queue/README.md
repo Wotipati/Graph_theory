@@ -1,46 +1,42 @@
-# Stack
-スタックを利用した数式の計算
+# Queue
+配列 or リストを利用したキュー
 
-#### スタックマシンの計算方法
-**演算子が登場したらスタックから2つのデータを取り出し、計算したものをスタックに積む**
-```
-1 2 + = 1+2 = 3
-
-1 2 - = 1-2 = -1
-
-2 4 / = 2/4 = 0.5
-```
-
-
-**スタックに積む順番を変更することで`()`の計算も区別可能**  
-```
-(1+2)*3 = 1 2 + 3 *
-
-1+(2*3) = 1 2 3 * +
-```
-
+### 配列を利用したキュー
+- リストを利用したものより、やや高速
+- データが満杯になる可能性がある
 
 #### Example
-`2+(3/4-1)*8 = 2 3 4 / 1 - 8 * +`を計算
 ```
->>2
-now stack: 2
->>3
-now stack: 2, 3
->>4
-now stack: 2, 3, 4
->>/
-now stack: 2, 0.75
->>1
-now stack: 2, 0.75, 1
->>-
-now stack: 2, -0.25
->>8
-now stack: 2, -0.25, 8
->>*
-now stack: 2, -2
->>+
-now stack: 0
->>=
-result = 0
+You add  1 & 2 & 3 / Now Queue: 1, 2, 3, 0, 0,
+You pull 1         / Now Queue: 0, 2, 3, 0, 0,
+You add  4 & 5     / Now Queue: 0, 2, 3, 4, 5,
+You pull 2         / Now Queue: 0, 0, 3, 4, 5,
+You add  6         / Now Queue: 6, 0, 3, 4, 5,
+FULL!!!
+You add  7         / Now Queue: 6, 0, 3, 4, 5,
+You pull 3         / Now Queue: 6, 0, 0, 4, 5,
+You pull 4         / Now Queue: 6, 0, 0, 0, 5,
+You pull 5         / Now Queue: 6, 0, 0, 0, 0,
+You pull 6         / Now Queue: 0, 0, 0, 0, 0,
+You pull EMPTY
+```
+
+### リストを利用したキュー
+- メモリの許す限りデータの追加が可能
+- やや低速
+
+#### Example
+```
+You add  1 & 2 & 3 / Now Queue: 1, 2, 3
+You pull 1         / Now Queue: 2, 3
+You add  4 & 5     / Now Queue: 2, 3, 4, 5
+You pull 2         / Now Queue: 3, 4, 5
+You add  6         / Now Queue: 3, 4, 5, 6
+You add  7         / Now Queue: 3, 4, 5, 6, 7
+You pull 3         / Now Queue: 4, 5, 6, 7
+You pull 4         / Now Queue: 5, 6, 7
+You pull 5         / Now Queue: 6, 7
+You pull 6         / Now Queue: 7
+You pull 7         / Now Queue: 0
+You pull Empty
 ```

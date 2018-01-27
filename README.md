@@ -1,6 +1,6 @@
 # dataStructures & Algorithms
 
-データ構造、アルゴリズム、グラフ理論について学んだ時に書いたpythonスクリプト置き場 (一部C++)
+データ構造、アルゴリズム、グラフ理論について学んだ時に書いたpythonスクリプト & C++ソースコード置き場
 
 ### [Searching](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Searching)
 - 探索アルゴリズム6種
@@ -11,10 +11,13 @@
 - バブルソート、クイックソート、マージソート ...
 
 ### [List](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/List)
-- 自作の双方向リスト (C++実装)
+- 自作の双方向リスト
 
 ### [Stack](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Stack)
-- スタックマシンによる簡単な四則演算 (c++実装)
+- スタックマシンによる簡単な四則演算
+
+### [Queue](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Queue)
+- キューとリングバッファの実装
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法関連
