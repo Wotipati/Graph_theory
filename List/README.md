@@ -43,6 +43,12 @@ int main(int argc, const char * argv[]) {
 #### `.deleteNode(int index)`
 - `index`番目の要素を削除
 
+#### `.getData(int index)`
+- `index`番目の要素を返す
+
+#### `.getLenght()`
+- 要素数を返す
+
 #### `.display()`
 - リストの要素を全て表示
 

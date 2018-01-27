@@ -163,7 +163,7 @@ int MyList::getData(int index){
 }
 
 
-int MyList::getLength_(){
+int MyList::getLength(){
     return listLength_;
 }
 

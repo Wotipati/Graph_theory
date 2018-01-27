@@ -129,6 +129,7 @@ bool MyList::popBackNode(){
     }
     else if(listLength_ == 1){
         listLength_ = 0;
+        beginNode_->data_ = 0;
         return true;
     }
     endNode_ = endNode_->prev_;
@@ -136,6 +137,34 @@ bool MyList::popBackNode(){
     endNode_->next_ = nullptr;
     listLength_ -= 1;
     return true;
+}
+
+
+int MyList::getData(int index){
+    if(abs(index)>listLength_ || index==0){
+        std::cout << "ERROR: out of range" << std::endl;
+        return -1;
+    }
+
+    if(index>=1){
+        Node *nodeSearcher = beginNode_;
+        for(int i=1; i<index; i++){
+            nodeSearcher = nodeSearcher->next_;
+        }
+        return nodeSearcher->data_;
+    }
+    else{
+        Node *nodeSearcher = endNode_;
+        for(int i=-1; i>index; i--){
+            nodeSearcher = nodeSearcher->prev_;
+        }
+        return nodeSearcher->data_;
+    }
+}
+
+
+int MyList::getLength(){
+    return listLength_;
 }
 
 
@@ -154,7 +183,7 @@ bool MyList::deleteNode(int index){
         popBackNode();
     }
 
-    if(index == 1 || index == -1*listLength_){
+    else if(index == 1 || index == -1*listLength_){
         beginNode_ = beginNode_->next_;
         delete beginNode_->prev_;
         beginNode_->prev_ = nullptr;

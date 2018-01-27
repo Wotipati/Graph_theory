@@ -28,7 +28,7 @@ void QueueList::enqueue(int data){
 
 
 int QueueList::dequeue(){
-    if(queueList_.getLength_() == 0){
+    if(queueList_.getLength() == 0){
         std::cout << "Empty" << std::endl;
         exit(1);
     }

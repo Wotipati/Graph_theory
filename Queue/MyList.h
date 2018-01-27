@@ -22,7 +22,7 @@ public:
     bool popBackNode();
     bool deleteNode(int index);
     int  getData(int index);
-    int getLength_();
+    int  getLength();
     void display();
 
 private:

@@ -21,6 +21,8 @@ public:
     bool insertNode(int newData, int index);
     bool popBackNode();
     bool deleteNode(int index);
+    int  getData(int index);
+    int  getLength();
     void display();
 
 private:
