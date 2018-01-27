@@ -18,7 +18,7 @@
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法関連
-- ナップザック問題yt6
+- ナップザック問題
 
 ### [DynamicTimeWarping](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicTimeWarping)
 - 動的時間伸縮法(DTW)

@@ -8,39 +8,109 @@
 
 #include <iostream>
 #include "QueueArray.h"
+#include "QueueList.h"
 
-void queArrayExample(QueueArray queArray);
+void queueArrayExample(QueueArray queArray);
+void queueListExample(QueueList queList);
 
 
 int main(int argc, const char * argv[]) {
-    QueueArray queArray;
-    queArrayExample(queArray);
+//    QueueArray queArray;
+//    queueArrayExample(queArray);
+
+    QueueList queList;
+    queueListExample(queList);
     return 0;
 }
 
 
-void queArrayExample(QueueArray queArray){
-    queArray.enqueue(1);
-    queArray.enqueue(2);
-    queArray.enqueue(3);
-    queArray.printQueue();
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.enqueue(4);
-    queArray.enqueue(5);
-    queArray.printQueue();
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.enqueue(6);
-    queArray.printQueue();
-    queArray.enqueue(7);
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.printQueue();
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.printQueue();
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.printQueue();
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.printQueue();
-    std::cout << "You get '" << queArray.dequeue() << "'." <<std::endl;
-    queArray.printQueue();
+void queueArrayExample(QueueArray queue){
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    std::cout << "You add  1 & 2 & 3 / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    queue.enqueue(4);
+    queue.enqueue(5);
+    std::cout << "You add  4 & 5     / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    queue.enqueue(6);
+    std::cout << "You add  6         / Now Queue: ";
+    queue.printQueue();
+
+    queue.enqueue(7);
+    std::cout << "You add  7         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
 }
 
+
+void queueListExample(QueueList queue){
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    std::cout << "You add  1 & 2 & 3 / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    queue.enqueue(4);
+    queue.enqueue(5);
+    std::cout << "You add  4 & 5     / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    queue.enqueue(6);
+    std::cout << "You add  6         / Now Queue: ";
+    queue.printQueue();
+
+    queue.enqueue(7);
+    std::cout << "You add  7         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+
+    std::cout << "You pull " << queue.dequeue() << "         / Now Queue: ";
+    queue.printQueue();
+}

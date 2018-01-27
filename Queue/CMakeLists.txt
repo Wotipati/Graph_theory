@@ -17,6 +17,9 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
 add_executable(Queue
         main.cpp
         QueueArray.cpp
-        QueueArray.h)
+        QueueArray.h
+        MyList.cpp
+        MyList.h
+        QueueList.h)
 
 
