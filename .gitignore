@@ -12,3 +12,4 @@ common.h
 /**/.idea/*
 /**/build/*
 /.idea/*
+/c_src/*
