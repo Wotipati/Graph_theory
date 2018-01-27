@@ -20,6 +20,7 @@ You pull 5         / Now Queue: 6, 0, 0, 0, 0,
 You pull 6         / Now Queue: 0, 0, 0, 0, 0,
 You pull EMPTY
 ```
+---
 
 ### リストを利用したキュー
 - メモリの許す限りデータの追加が可能
