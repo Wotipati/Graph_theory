@@ -15,4 +15,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
 
 
-add_executable(BinaryTree main.cpp BinaryTree.cpp BinaryTree.h)
+add_executable(BinaryTree
+        main.cpp
+        BinaryTree.cpp BinaryTree.h
+        )

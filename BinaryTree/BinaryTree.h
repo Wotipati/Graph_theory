@@ -5,14 +5,15 @@
 #ifndef BINARYTREE_BINARYTREE_H
 #define BINARYTREE_BINARYTREE_H
 
-#include <opencl-c.h>
 #include <iostream>
+#include <random>
 #include <stdio.h>
 
 struct Node{
-    int value;
+    int value_;
     Node *left_;
-    Node * raight_;
+    Node *right_;
+    Node *parent_;
 };
 
 
@@ -20,14 +21,22 @@ class BinaryTree{
 public:
     BinaryTree();
     ~BinaryTree();
-    void clearTree();
 
-    void insertNode(int value, Node *leaf);
-    void displayTree(int depth);
+    void insertNode(int value);
+    bool deleteNode(int value);
+    Node *searchNode(int value);
+    void setupTree(int num);
+    void displayTree();
+    void clearTree();
 
 private:
     Node *root_;
 
+    void insertNode(int value, Node *leaf);
+    Node *createNode(int value, Node *parent);
+    Node *searchNode(int value, Node *leaf);
+    Node *searchBiggestNode(Node *root);
+    void displayTree(int depth, Node *leaf);
     void clearTree(Node *leaf);
 };
 
