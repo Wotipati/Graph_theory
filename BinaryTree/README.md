@@ -99,4 +99,3 @@ public:
 ##### `coid clearTree()`
 2分木全体を消去
 
-#### Example

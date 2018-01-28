@@ -11,7 +11,6 @@
 - バブルソート、クイックソート、マージソート ...
 
 ### [List](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/List)
-- リスト構造について
 - 自作の双方向リスト
 
 ### [Stack](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/Stack)
@@ -25,6 +24,9 @@
 ### [RecursiveCall](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/RecursiveCall)
 - 再帰呼び出しの初歩
 - 最大公約数の計算など
+
+### [BinaryTree] (https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/BinaryTree)
+- 2分木構造の実装
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
 - 動的計画法関連
