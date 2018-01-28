@@ -25,7 +25,7 @@
 - 再帰呼び出しの初歩
 - 最大公約数の計算など
 
-### [BinaryTree] (https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/BinaryTree)
+### [BinaryTree](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/BinaryTree)
 - 2分木構造の実装
 
 ### [DynamicProgramming](https://github.com/Wotipati/dataStructuresAndAlgorithms/tree/master/DynamicProgramming)
