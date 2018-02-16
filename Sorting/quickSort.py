@@ -2,7 +2,7 @@ import numpy as np
 import argparse
 
 
-def quick_sort(left, right, input_list):
+def quick_sort_sub(left, right, input_list):
     if left >= right:
         return
 
@@ -27,8 +27,12 @@ def quick_sort(left, right, input_list):
     input_list[left] = input_list[upper]
     input_list[upper] = stack
 
-    quick_sort(left, upper-1, input_list)
-    quick_sort(upper+1, right, input_list)
+    quick_sort_sub(left, upper-1, input_list)
+    quick_sort_sub(upper+1, right, input_list)
+
+
+def quick_sort(input_list):
+    quick_sort_sub(0, len(input_list)-1, input_list)
 
 
 def main():
@@ -38,13 +42,13 @@ def main():
 
     total_number = args.n
 
-    bubble = np.random.randint(10, total_number*10, total_number)
+    target_list = np.random.randint(10, total_number*10, total_number)
 
-    print('Before:{0}'.format(bubble))
+    print('Before:{0}'.format(target_list))
 
-    quick_sort(0, total_number-1, bubble)
+    quick_sort(target_list)
 
-    print('After: {0}'.format(bubble))
+    print('After: {0}'.format(target_list))
 
 
 if __name__ == '__main__':
