@@ -12,48 +12,47 @@
 
 
 int main(int argc, const char * argv[]) {
-    DoublyLinkedList myList;
-    myList.pushBackNode(0);
-    myList.display();
-    myList.pushBackNode(5);
-    myList.display();
-    myList.replaceNode(4, 1);
-    myList.display();
-    myList.insertNode(2, 1);
-    myList.display();
-    myList.insertNode(3, 2);
-    myList.display();
-    myList.insertNode(7, 5);
-    myList.display();
-    myList.insertNode(8, -1);
-    myList.display();
-    myList.insertNode(6, -3);
-    myList.display();
-    myList.insertNode(1, -8);
-    myList.display();
+    DoublyLinkedList myList1;
+    myList1.pushBackNode(0);
+    myList1.pushBackNode(5);
+    myList1.replaceNode(4, 1);
+    myList1.insertNode(2, 1);
+    myList1.insertNode(3, 2);
+    myList1.insertNode(7, 5);
+    myList1.insertNode(8, -1);
+    myList1.insertNode(6, -3);
+    myList1.insertNode(1, -8);
 
     DoublyLinkedList myList2;
-    myList2 = myList;
-    myList2.display();
-//    myList.popBackNode();
-//    myList.display();
-//    myList.deleteNode(2);
-//    myList.display();
-//    myList.deleteNode(6);
-//    myList.display();
-//    myList.deleteNode(-1);
-//    myList.display();
-//    myList.deleteNode(-2);
-//    myList.display();
-//    myList.deleteNode(-3);
-//    myList.display();
-//    myList.popBackNode();
-//    myList.popBackNode();
-//    myList.pushBackNode(2);
-//    myList.display();
+    myList2 = myList1;
+    myList2.pushBackNode(5);
 
-//    DoublyLinkedListTemp<double> myListTemp;
-//    myListTemp.pushBackNode(0.5);
-//    myListTemp.display();
+    DoublyLinkedList myList3 = myList2;
+    myList3 = myList1;
+
+    std::cout << "   mylist1   ";
+    myList1.display();
+    std::cout << "   mylist2   ";
+    myList2.display();
+    std::cout << "   mylist3   ";
+    myList3.display();
+
+    myList1.popBackNode();
+    myList1.deleteNode(2);
+    myList1.deleteNode(6);
+    myList1.deleteNode(-1);
+    myList1.deleteNode(-2);
+    myList1.deleteNode(-3);
+    myList1.popBackNode();
+    myList1.popBackNode();
+    myList1.pushBackNode(2);
+
+    std::cout << "   mylist1   ";
+    myList1.display();
+
+    DoublyLinkedListTemp<double> myListTemp;
+    myListTemp.pushBackNode(0.5);
+    std::cout << "myListTemp   ";
+    myListTemp.display();
     return 0;
 }

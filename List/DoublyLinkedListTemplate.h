@@ -11,8 +11,10 @@
 template <typename T>
 class DoublyLinkedListTemp{
 public:
-    DoublyLinkedListTemp();
+    DoublyLinkedListTemp():beginNode_(nullptr),endNode_(nullptr),listLength_(0){}
     ~DoublyLinkedListTemp();
+    DoublyLinkedListTemp(const DoublyLinkedListTemp& other);
+    DoublyLinkedListTemp &operator=(DoublyLinkedListTemp<T> src);
     bool replaceNode(T newData, int index);
     bool pushBackNode(T newData);
     bool insertNode(T newData, int index);
@@ -33,11 +35,53 @@ private:
 
 
 template <typename T>
-DoublyLinkedListTemp<T>::DoublyLinkedListTemp(){
-    beginNode_ = nullptr;
-    endNode_ = nullptr;
-    listLength_ = 0;
+DoublyLinkedListTemp<T>::DoublyLinkedListTemp(const DoublyLinkedListTemp &src){
+    this->beginNode_ = nullptr;
+    this->endNode_= nullptr;
+    this->listLength_ = 0;
+
+    Node *nodeSearcher = src.beginNode_;
+    while(nodeSearcher != nullptr){
+        pushBackNode(nodeSearcher->data_);
+        nodeSearcher = nodeSearcher->next_;
+    }
 }
+
+
+template <typename T>
+DoublyLinkedListTemp<T> &DoublyLinkedListTemp<T>::operator=(DoublyLinkedListTemp<T> src){
+    Node *srcNodePtr = src.beginNode_;
+    if(this->listLength_ <= 0){
+        this->pushBackNode(srcNodePtr->data_);
+        srcNodePtr = srcNodePtr->next_;
+    }
+    Node *thisNodePtr = this->beginNode_;
+
+    if(this->listLength_ <= src.listLength_){
+        while(thisNodePtr->next_ != nullptr){
+            thisNodePtr->data_ = srcNodePtr->data_;
+            thisNodePtr = thisNodePtr->next_;
+            srcNodePtr = srcNodePtr->next_;
+        }
+
+        while(srcNodePtr != nullptr){
+            this->pushBackNode(srcNodePtr->data_);
+            srcNodePtr = srcNodePtr->next_;
+        }
+    }
+    else{
+        while(srcNodePtr->next_ != nullptr){
+            thisNodePtr->data_ = srcNodePtr->data_;
+            thisNodePtr = thisNodePtr->next_;
+            srcNodePtr = srcNodePtr->next_;
+        }
+        while(this->listLength_ > src.listLength_){
+            this->popBackNode();
+        }
+    }
+    return *this;
+}
+
 
 template <typename T>
 bool DoublyLinkedListTemp<T>::replaceNode(T newData_, int index){
@@ -136,6 +180,7 @@ bool DoublyLinkedListTemp<T>::insertNode(T newData_, int index){
     return true;
 }
 
+
 template <typename T>
 void DoublyLinkedListTemp<T>::display(){
     Node *nodeSearcher = beginNode_;
@@ -145,6 +190,7 @@ void DoublyLinkedListTemp<T>::display(){
     }
     std::cout << nodeSearcher->data_ << std::endl;
 }
+
 
 template <typename T>
 bool DoublyLinkedListTemp<T>::popBackNode(){
@@ -162,6 +208,7 @@ bool DoublyLinkedListTemp<T>::popBackNode(){
     listLength_ -= 1;
     return true;
 }
+
 
 template <typename T>
 bool DoublyLinkedListTemp<T>::deleteNode(int index){
@@ -213,6 +260,7 @@ bool DoublyLinkedListTemp<T>::deleteNode(int index){
     return true;
 }
 
+
 template <typename T>
 DoublyLinkedListTemp<T>::~DoublyLinkedListTemp(){
     Node *nodeSearcher = beginNode_;
@@ -223,6 +271,5 @@ DoublyLinkedListTemp<T>::~DoublyLinkedListTemp(){
         nodeSearcher = next_Node;
     }
 }
-
 
 #endif //LIST_DoublyLinkedListTEMPLATE_H

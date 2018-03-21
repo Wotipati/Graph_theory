@@ -15,6 +15,23 @@ int main(int argc, const char * argv[]) {
     myList.insertNode(8, -1);  // [2, 3, 4, 5, 7, 8]
     myList.insertNode(6, -3);  // [2, 3, 4, 5, 6, 7, 8]
     myList.insertNode(1, -8);  // [1, 2, 3, 4, 5, 6, 7, 8]
+    
+    // コピーコンストラクタ、=演算子が正常に動くかチェック
+    DoublyLinkedList myList2;
+    myList2 = myList1;
+    myList2.pushBackNode(5);
+    
+    DoublyLinkedList myList3 = myList2;
+    myList3 = myList1;
+    
+    std::cout << "   mylist1   ";
+    myList1.display();
+    std::cout << "   mylist2   ";
+    myList2.display();
+    std::cout << "   mylist3   ";
+    myList3.display();
+    
+    
     myList.popBackNode();      // [1, 2, 3, 4, 5, 6, 7]
     myList.deleteNode(2);      // [1, 3, 4, 5, 6, 7]
     myList.deleteNode(6);      // [1, 3, 4, 5, 6]
@@ -25,6 +42,18 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 ```
+
+### Result
+```
+   mylist1   1, 2, 3, 4, 5, 6, 7, 8
+   mylist2   1, 2, 3, 4, 5, 6, 7, 8, 5
+   mylist3   1, 2, 3, 4, 5, 6, 7, 8
+   mylist1   3, 5
+```
+
+
+
+
 ### メンバ関数
 引数の`index`は負の値を入れると、**後ろから数えて`index`番目**となる  
 

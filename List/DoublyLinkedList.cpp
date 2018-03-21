@@ -8,13 +8,22 @@
 
 #include "DoublyLinkedList.h"
 
-//DoublyLinkedList::DoublyLinkedList(){
-//    beginNode_ = nullptr;
-//    endNode_ = nullptr;
-//    listLength_ = 0;
-//}
+DoublyLinkedList::~DoublyLinkedList(){
+    Node *nodeSearcher = beginNode_;
+    Node *next_Node;
+    while(nodeSearcher!= nullptr){
+        next_Node = nodeSearcher->next_;
+        delete nodeSearcher;
+        nodeSearcher = next_Node;
+    }
+}
 
-DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList &src) {
+
+DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList &src){
+    this->beginNode_ = nullptr;
+    this->endNode_= nullptr;
+    this->listLength_ = 0;
+
     Node *nodeSearcher = src.beginNode_;
     while(nodeSearcher != nullptr){
         pushBackNode(nodeSearcher->data_);
@@ -22,10 +31,40 @@ DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList &src) {
     }
 }
 
+
 DoublyLinkedList &DoublyLinkedList::operator=(DoublyLinkedList src){
-    std::swap(beginNode_, src.beginNode_);
+    Node *srcNodePtr = src.beginNode_;
+    if(this->listLength_ <= 0){
+        this->pushBackNode(srcNodePtr->data_);
+        srcNodePtr = srcNodePtr->next_;
+    }
+    Node *thisNodePtr = this->beginNode_;
+
+    if(this->listLength_ <= src.listLength_){
+        while(thisNodePtr->next_ != nullptr){
+            thisNodePtr->data_ = srcNodePtr->data_;
+            thisNodePtr = thisNodePtr->next_;
+            srcNodePtr = srcNodePtr->next_;
+        }
+
+        while(srcNodePtr != nullptr){
+            this->pushBackNode(srcNodePtr->data_);
+            srcNodePtr = srcNodePtr->next_;
+        }
+    }
+    else{
+        while(srcNodePtr->next_ != nullptr){
+            thisNodePtr->data_ = srcNodePtr->data_;
+            thisNodePtr = thisNodePtr->next_;
+            srcNodePtr = srcNodePtr->next_;
+        }
+        while(this->listLength_ > src.listLength_){
+            this->popBackNode();
+        }
+    }
     return *this;
 }
+
 
 bool DoublyLinkedList::replaceNode(int newData_, int index){
     if(abs(index)>listLength_ || index==0){
@@ -227,15 +266,4 @@ bool DoublyLinkedList::deleteNode(int index){
         delete deletingNode;
     }
     return true;
-}
-
-
-DoublyLinkedList::~DoublyLinkedList(){
-    Node *nodeSearcher = beginNode_;
-    Node *next_Node;
-    while(nodeSearcher!= nullptr){
-        next_Node = nodeSearcher->next_;
-        delete nodeSearcher;
-        nodeSearcher = next_Node;
-    }
 }

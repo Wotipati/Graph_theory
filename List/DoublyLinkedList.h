@@ -16,8 +16,8 @@
 class DoublyLinkedList{
 public:
     DoublyLinkedList():beginNode_(nullptr),endNode_(nullptr),listLength_(0){}
-    DoublyLinkedList(const DoublyLinkedList& other);
     ~DoublyLinkedList();
+    DoublyLinkedList(const DoublyLinkedList& other);
     DoublyLinkedList &operator=(DoublyLinkedList src);
 
     bool replaceNode(int newData, int index);
