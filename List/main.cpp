@@ -7,12 +7,12 @@
 //
 
 #include <iostream>
-#include "MyList.h"
-#include "MyListTemplate.h"
+#include "DoublyLinkedList.h"
+#include "DoublyLinkedListTemplate.h"
 
 
 int main(int argc, const char * argv[]) {
-    MyList myList;
+    DoublyLinkedList myList;
     myList.pushBackNode(0);
     myList.display();
     myList.pushBackNode(5);
@@ -31,25 +31,29 @@ int main(int argc, const char * argv[]) {
     myList.display();
     myList.insertNode(1, -8);
     myList.display();
-    myList.popBackNode();
-    myList.display();
-    myList.deleteNode(2);
-    myList.display();
-    myList.deleteNode(6);
-    myList.display();
-    myList.deleteNode(-1);
-    myList.display();
-    myList.deleteNode(-2);
-    myList.display();
-    myList.deleteNode(-3);
-    myList.display();
-    myList.popBackNode();
-    myList.popBackNode();
-    myList.pushBackNode(2);
-    myList.display();
 
-    MyListTemp<double> myListTemp;
-    myListTemp.pushBackNode(0.5);
-    myListTemp.display();
+    DoublyLinkedList myList2;
+    myList2 = myList;
+    myList2.display();
+//    myList.popBackNode();
+//    myList.display();
+//    myList.deleteNode(2);
+//    myList.display();
+//    myList.deleteNode(6);
+//    myList.display();
+//    myList.deleteNode(-1);
+//    myList.display();
+//    myList.deleteNode(-2);
+//    myList.display();
+//    myList.deleteNode(-3);
+//    myList.display();
+//    myList.popBackNode();
+//    myList.popBackNode();
+//    myList.pushBackNode(2);
+//    myList.display();
+
+//    DoublyLinkedListTemp<double> myListTemp;
+//    myListTemp.pushBackNode(0.5);
+//    myListTemp.display();
     return 0;
 }

@@ -2,17 +2,17 @@
 // Created by Seita Kayukawa on 2018/01/19.
 //
 
-#ifndef LIST_MYLISTTEMPLATE_H
-#define LIST_MYLISTTEMPLATE_H
+#ifndef LIST_DoublyLinkedListTEMPLATE_H
+#define LIST_DoublyLinkedListTEMPLATE_H
 
 #include <stdio.h>
 #include <iostream>
 
 template <typename T>
-class MyListTemp{
+class DoublyLinkedListTemp{
 public:
-    MyListTemp();
-    ~MyListTemp();
+    DoublyLinkedListTemp();
+    ~DoublyLinkedListTemp();
     bool replaceNode(T newData, int index);
     bool pushBackNode(T newData);
     bool insertNode(T newData, int index);
@@ -33,14 +33,14 @@ private:
 
 
 template <typename T>
-MyListTemp<T>::MyListTemp(){
+DoublyLinkedListTemp<T>::DoublyLinkedListTemp(){
     beginNode_ = nullptr;
     endNode_ = nullptr;
     listLength_ = 0;
 }
 
 template <typename T>
-bool MyListTemp<T>::replaceNode(T newData_, int index){
+bool DoublyLinkedListTemp<T>::replaceNode(T newData_, int index){
     if(abs(index)>listLength_ || index==0){
         std::cout << "ERROR: out of range" << std::endl;
         return false;
@@ -64,7 +64,7 @@ bool MyListTemp<T>::replaceNode(T newData_, int index){
 }
 
 template <typename T>
-bool MyListTemp<T>::pushBackNode(T newData_){
+bool DoublyLinkedListTemp<T>::pushBackNode(T newData_){
     Node *newNode;
     newNode = new Node;
     newNode->data_ = newData_;
@@ -90,7 +90,7 @@ bool MyListTemp<T>::pushBackNode(T newData_){
 }
 
 template <typename T>
-bool MyListTemp<T>::insertNode(T newData_, int index){
+bool DoublyLinkedListTemp<T>::insertNode(T newData_, int index){
     if(abs(index)>listLength_+1 || index == 0){
         std::cout << "ERROR: out of range" << std::endl;
         return false;
@@ -137,7 +137,7 @@ bool MyListTemp<T>::insertNode(T newData_, int index){
 }
 
 template <typename T>
-void MyListTemp<T>::display(){
+void DoublyLinkedListTemp<T>::display(){
     Node *nodeSearcher = beginNode_;
     while(nodeSearcher->next_){
         std::cout << nodeSearcher->data_ << ", ";
@@ -147,7 +147,7 @@ void MyListTemp<T>::display(){
 }
 
 template <typename T>
-bool MyListTemp<T>::popBackNode(){
+bool DoublyLinkedListTemp<T>::popBackNode(){
     if(listLength_ == 0){
         std::cout << "ERROR: stack underflow" <<std::endl;
         return false;
@@ -164,7 +164,7 @@ bool MyListTemp<T>::popBackNode(){
 }
 
 template <typename T>
-bool MyListTemp<T>::deleteNode(int index){
+bool DoublyLinkedListTemp<T>::deleteNode(int index){
     if(listLength_ == 0){
         std::cout << "ERROR: stack underflow" <<std::endl;
         return false;
@@ -214,7 +214,7 @@ bool MyListTemp<T>::deleteNode(int index){
 }
 
 template <typename T>
-MyListTemp<T>::~MyListTemp(){
+DoublyLinkedListTemp<T>::~DoublyLinkedListTemp(){
     Node *nodeSearcher = beginNode_;
     Node *next_Node;
     while(nodeSearcher!= nullptr){
@@ -225,4 +225,4 @@ MyListTemp<T>::~MyListTemp(){
 }
 
 
-#endif //LIST_MYLISTTEMPLATE_H
+#endif //LIST_DoublyLinkedListTEMPLATE_H

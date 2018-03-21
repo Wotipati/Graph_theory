@@ -1,21 +1,33 @@
 //
-//  MyList.cpp
+//  DoublyLinkedList.cpp
 //  List
 //
 //  Created by Seita Kayukawa on 2018/01/16.
 //  Copyright © 2018年 Seita Kayukawa. All rights reserved.
 //
 
-#include "MyList.h"
+#include "DoublyLinkedList.h"
 
-MyList::MyList(){
-    beginNode_ = nullptr;
-    endNode_ = nullptr;
-    listLength_ = 0;
+//DoublyLinkedList::DoublyLinkedList(){
+//    beginNode_ = nullptr;
+//    endNode_ = nullptr;
+//    listLength_ = 0;
+//}
+
+DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList &src) {
+    Node *nodeSearcher = src.beginNode_;
+    while(nodeSearcher != nullptr){
+        pushBackNode(nodeSearcher->data_);
+        nodeSearcher = nodeSearcher->next_;
+    }
 }
 
+DoublyLinkedList &DoublyLinkedList::operator=(DoublyLinkedList src){
+    std::swap(beginNode_, src.beginNode_);
+    return *this;
+}
 
-bool MyList::replaceNode(int newData_, int index){
+bool DoublyLinkedList::replaceNode(int newData_, int index){
     if(abs(index)>listLength_ || index==0){
         std::cout << "ERROR: out of range" << std::endl;
         return false;
@@ -39,7 +51,7 @@ bool MyList::replaceNode(int newData_, int index){
 }
 
 
-bool MyList::pushBackNode(int newData_){
+bool DoublyLinkedList::pushBackNode(int newData_){
     Node *newNode;
     newNode = new Node;
     newNode->data_ = newData_;
@@ -65,7 +77,7 @@ bool MyList::pushBackNode(int newData_){
 }
 
 
-bool MyList::insertNode(int newData_, int index){
+bool DoublyLinkedList::insertNode(int newData_, int index){
     if(abs(index)>listLength_+1 || index == 0){
         std::cout << "ERROR: out of range" << std::endl;
         return false;
@@ -112,7 +124,7 @@ bool MyList::insertNode(int newData_, int index){
 }
 
 
-void MyList::display(){
+void DoublyLinkedList::display(){
     Node *nodeSearcher = beginNode_;
     while(nodeSearcher->next_){
         std::cout << nodeSearcher->data_ << ", ";
@@ -122,7 +134,7 @@ void MyList::display(){
 }
 
 
-bool MyList::popBackNode(){
+bool DoublyLinkedList::popBackNode(){
     if(listLength_ == 0){
         std::cout << "ERROR: stack underflow" <<std::endl;
         return false;
@@ -140,7 +152,7 @@ bool MyList::popBackNode(){
 }
 
 
-int MyList::getData(int index){
+int DoublyLinkedList::getData(int index){
     if(abs(index)>listLength_ || index==0){
         std::cout << "ERROR: out of range" << std::endl;
         return -1;
@@ -163,12 +175,12 @@ int MyList::getData(int index){
 }
 
 
-int MyList::getLength(){
+int DoublyLinkedList::getLength(){
     return listLength_;
 }
 
 
-bool MyList::deleteNode(int index){
+bool DoublyLinkedList::deleteNode(int index){
     if(listLength_ == 0){
         std::cout << "ERROR: stack underflow" <<std::endl;
         return false;
@@ -218,7 +230,7 @@ bool MyList::deleteNode(int index){
 }
 
 
-MyList::~MyList(){
+DoublyLinkedList::~DoublyLinkedList(){
     Node *nodeSearcher = beginNode_;
     Node *next_Node;
     while(nodeSearcher!= nullptr){

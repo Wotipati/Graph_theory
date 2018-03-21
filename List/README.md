@@ -1,11 +1,11 @@
 # List
-### MyList.h & .cpp
+### DoublyLinkedList.h & .cpp
 リストの構造を勉強するために自作した双方向リスト
 
 ### Example
 ```c++
 int main(int argc, const char * argv[]) {
-    MyList myList;             // MyList
+    DoublyLinkedList myList;   // DoublyLinkedList
     myList.pushBackNode(0);    // [0]
     myList.pushBackNode(5);    // [0, 5]
     myList.replaceNode(4, 1);  // [4, 5]
@@ -53,5 +53,5 @@ int main(int argc, const char * argv[]) {
 - リストの要素を全て表示
 
 
-### MyListTemplate.h
+### DoublyLinkedListTemplate.h
 - 自作リストのテンプレート

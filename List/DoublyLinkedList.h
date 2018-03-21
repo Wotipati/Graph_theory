@@ -1,21 +1,25 @@
 //
-//  MyList.h
+//  DoublyLinkedList.h
 //  List
 //
 //  Created by Seita Kayukawa on 2018/01/16.
 //  Copyright © 2018年 Seita Kayukawa. All rights reserved.
 //
 
-#ifndef MyList_h
-#define MyList_h
+#ifndef DoublyLinkedList_h
+#define DoublyLinkedList_h
 
 #include <stdio.h>
 #include <iostream>
 
-class MyList{
+
+class DoublyLinkedList{
 public:
-    MyList();
-    ~MyList();
+    DoublyLinkedList():beginNode_(nullptr),endNode_(nullptr),listLength_(0){}
+    DoublyLinkedList(const DoublyLinkedList& other);
+    ~DoublyLinkedList();
+    DoublyLinkedList &operator=(DoublyLinkedList src);
+
     bool replaceNode(int newData, int index);
     bool pushBackNode(int newData);
     bool insertNode(int newData, int index);
@@ -38,4 +42,4 @@ private:
 };
 
 
-#endif /* MyList_h */
+#endif /* DoublyLinkedList_h */
