@@ -31,7 +31,7 @@ int QueueArray::dequeue() {
 }
 
 
-void QueueArray::printQueue() {
+void QueueArray::printQueue() const{
     for(int qi=0; qi<queueLength_; qi++){
         std::cout << queue_[qi] << ", ";
     }

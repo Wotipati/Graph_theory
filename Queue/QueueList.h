@@ -5,17 +5,17 @@
 #ifndef QUEUE_QUEUELIST_H
 #define QUEUE_QUEUELIST_H
 
-#include "MyList.h"
+#include "DoublyLinkedList.h"
 
 class QueueList{
 public:
     QueueList();
     void enqueue(int data);
     int dequeue();
-    void printQueue();
+    void printQueue() const;
 
 private:
-    MyList queueList_;
+    DoublyLinkedList queueList_;
 };
 
 QueueList::QueueList(){
@@ -37,7 +37,7 @@ int QueueList::dequeue(){
     return ret;
 }
 
-void QueueList::printQueue(){
+void QueueList::printQueue() const{
     queueList_.display();
 }
 #endif //QUEUE_QUEUELIST_H

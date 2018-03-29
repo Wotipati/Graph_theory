@@ -13,7 +13,7 @@ public:
     QueueArray();
     void enqueue(int data);
     int dequeue();
-    void printQueue();
+    void printQueue() const;
 
 private:
     static const int queueLength_ = 5;
