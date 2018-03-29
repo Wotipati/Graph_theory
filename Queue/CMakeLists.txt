@@ -18,8 +18,8 @@ add_executable(Queue
         main.cpp
         QueueArray.cpp
         QueueArray.h
-        MyList.cpp
-        MyList.h
+        DoublyLinkedList.cpp
+        DoublyLinkedList.h
         QueueList.h)
 
 
