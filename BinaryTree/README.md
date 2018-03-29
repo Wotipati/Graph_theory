@@ -76,9 +76,9 @@ public:
 
     void insertNode(int value);
     bool deleteNode(int value);
-    Node *searchNode(int value);
+    Node *searchNode(int value) const;
     void setupTree(int num);
-    void displayTree();
+    void displayTree() const;
     void clearTree();
 ```
 ##### `void insertNode(int value)`

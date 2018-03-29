@@ -24,9 +24,9 @@ public:
 
     void insertNode(int value);
     bool deleteNode(int value);
-    Node *searchNode(int value);
+    Node *searchNode(int value) const;
     void setupTree(int num);
-    void displayTree();
+    void displayTree() const;
     void clearTree();
 
 private:
@@ -34,9 +34,9 @@ private:
 
     void insertNode(int value, Node *leaf);
     Node *createNode(int value, Node *parent);
-    Node *searchNode(int value, Node *leaf);
-    Node *searchBiggestNode(Node *root);
-    void displayTree(int depth, Node *leaf);
+    Node *searchNode(int value, Node *leaf) const;
+    Node *searchBiggestNode(Node *root) const;
+    void displayTree(int depth, Node *leaf) const;
     void clearTree(Node *leaf);
 };
 

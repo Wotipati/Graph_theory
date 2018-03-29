@@ -65,7 +65,7 @@ bool BinaryTree::deleteNode(int value){
 }
 
 
-Node *BinaryTree::searchNode(int value){
+Node *BinaryTree::searchNode(int value) const{
     return searchNode(value, root_);
 }
 
@@ -80,7 +80,7 @@ void BinaryTree::setupTree(int num){
 }
 
 
-void BinaryTree::displayTree(){
+void BinaryTree::displayTree() const{
     displayTree(0, root_);
 }
 
@@ -118,7 +118,7 @@ Node *BinaryTree::createNode(int value, Node *parent){
 }
 
 
-Node *BinaryTree::searchNode(int value, Node *leaf){
+Node *BinaryTree::searchNode(int value, Node *leaf) const{
     if(leaf != nullptr){
         if(value == leaf->value_){
             return leaf;
@@ -135,7 +135,7 @@ Node *BinaryTree::searchNode(int value, Node *leaf){
 }
 
 
-Node *BinaryTree::searchBiggestNode(Node *root){
+Node *BinaryTree::searchBiggestNode(Node *root) const{
     Node *nodeSearcher = root;
     while(nodeSearcher->right_ != nullptr){
         nodeSearcher = nodeSearcher->right_;
@@ -144,7 +144,7 @@ Node *BinaryTree::searchBiggestNode(Node *root){
 }
 
 
-void BinaryTree::displayTree(int depth, Node *leaf){
+void BinaryTree::displayTree(int depth, Node *leaf) const{
     if (leaf == nullptr) {
         return;
     }
