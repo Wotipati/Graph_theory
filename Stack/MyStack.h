@@ -18,8 +18,8 @@ public:
     ~MyStack();
     bool pushBack(double newData);
     double popBack();
-    void display();
-    int length();
+    void display() const;
+    int length() const{return listLength_;};
 
 private:
     struct Node{

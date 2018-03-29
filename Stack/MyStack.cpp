@@ -60,7 +60,7 @@ double MyStack::popBack(){
 }
 
 
-void MyStack::display(){
+void MyStack::display() const{
     std::cout << "now stack: ";
     Node *nodeSearcher = beginNode_;
     while(nodeSearcher->next_){
@@ -70,9 +70,6 @@ void MyStack::display(){
     std::cout << nodeSearcher->data_ << std::endl;
 }
 
-int MyStack::length(){
-    return listLength_;
-}
 
 
 MyStack::~MyStack(){
